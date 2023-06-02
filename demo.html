@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+		<meta name="Keywords" content="http-flv,websocket,mp4,hls,m3u8"/>
+        <meta content="Creative Infinite Video Expert @云视睿博 http://www.ruiboyun.com/" />
+        <title>网页播放器</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script type="text/javascript" src="uplayer.min.js"></script>
+        <style type="text/css">
+          .playDiv{
+              width:  640px;
+              height: 360px;
+              background:rgb(8, 8, 8);
+                    margin: 0 auto;
+          }
+          .video_url{
+            width: 500px;
+          }
+          video{
+              pointer-events: none;
+          }
+          footer{
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+          }
+        </style>
+    </head>
+    <body> 
+        <main class="container">
+            <div style="width: 640px; height: 360px; margin: 100px auto;">
+                <div id="video_div" class="playDiv"></div>
+                <div>
+                    <div class="input-group m-2">
+                        <input  type="text"   id="video_url"   class="form-control" placeholder="输入播放地址" aria-describedby="button-play">
+                        <button type="button" id="button-play" class="btn btn-outline-secondary"  onclick="javascript:play_url()">播放</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p class="text-center text-muted">&copy; 2023 <a href="http://www.ruiboyun.com/" target="_blank">创意无限 云视睿博</a> Novel-TV Co.,Ltd.</p>
+        </footer>
+      
+    </body>
+</html>
+<script type="text/javascript">
+    /**
+     * 播放函数原型：
+     * play(url,divId,format)
+     * @param {type} url   视频地址，支持hls,mp4,rtmp,http-flv协议. 
+     * @param {type} divId 视频播放窗口的div的id 
+     * @param {type} format 视频流格式，可以是： flv, hls, rtmp, mp4等. 也可以忽略。
+     */
+    function play_url(){
+        var divId = "video_div";
+        var format = "";
+        var url   = document.getElementById('video_url').value;
+        if(url!=""){
+            stopAll();
+            play(url,divId,format);
+        }
+    }
+</script>
