@@ -42,5 +42,5 @@ uplayer.js works by transmuxing TS、FLV、MP4 stream into ISO BMFF (Fragmented 
 ## Limitations
 - G711 audio codec is not support
 - MP3 audio codec is currently not working on IE11 / Edge
-- HTTP FLV live stream is not currently working on all browsers, see [livestream.md](docs/livestream.md)
+- HTTP FLV live stream is not currently working on all browsers
 
