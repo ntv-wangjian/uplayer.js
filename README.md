@@ -1,6 +1,7 @@
 # uplayer.js
 A very simple and powerful HTML 5 web Player,Which can playback H264/H265 video and aac audio transported in http(s) or WebSocket.
-
+一个使用简单、功能超强大的网页播放放器，可以播放H264/H265视频，支持mp4、flv、ts等封装格式，支持http、websocket协议，支持当前几乎所有常用网络直播和点播协议。
+具体参见 Features.
 ## Overview
 uplayer.js works by transmuxing TS、FLV、MP4 stream into ISO BMFF (Fragmented MP4) segments, followed by feeding mp4 segments into an HTML5 `<video>` element through [Media Source Extensions][] API.
 [Media Source Extensions]: https://w3c.github.io/media-source/
